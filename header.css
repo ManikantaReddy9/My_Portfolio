@@ -1,0 +1,290 @@
+/* Apply smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Full-screen welcome screen */
+#welcome-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(-45deg, #000000, #1a1a1a, #333333, #000000);
+    background-size: 400% 400%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    opacity: 1;
+    animation: fadeOut 3s ease-in-out 3s forwards, bgAnimation 6s infinite alternate;
+}
+
+/* Background Animation */
+@keyframes bgAnimation {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+/* Typing effect */
+.welcome-text {
+    font-size: 50px;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8);
+    overflow: hidden;
+    border-right: 4px solid white;
+    white-space: nowrap;
+    width: 0;
+    animation: typing 2s steps(22, end) forwards, blink 0.7s infinite;
+}
+
+/* Typing animation */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+/* Blinking cursor effect */
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+
+/* Fade-out effect */
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; visibility: hidden; }
+}
+
+/* Fade-in effect for main content */
+#main-content {
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+}
+
+
+
+/* Background styling */
+body {
+    background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+/* Header with glassmorphism effect */
+header {
+    background: rgba(0, 0, 0, 0.7); 
+    backdrop-filter: blur(10px);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+    height: 100px;
+    transition: 0.3s ease-in-out;
+}
+
+/* Logo styling */
+.logo a {
+    font-size: 22px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+    text-decoration: none;
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    width: 25px; /* Initially show only the first letter */
+    transition: width 0.7s ease-in-out;
+    animation: showFullName 3s ease-in-out forwards;
+}
+
+@keyframes showFullName {
+    0% {
+        width: 25px; /* Show only "M" */
+    }
+    100% {
+        width: 250px; /* Expand to full name */
+    }
+}
+
+
+.logo a:hover {
+    color: #ff9800;
+    transform: scale(1.1);
+}
+
+/* Navigation menu */
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 15px;
+    transition: 0.3s ease-in-out;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 152, 0, 0.3);
+    color: #ff9800;
+    text-decoration: none;
+    transform: scale(1.1);
+}
+
+/* Animated lines */
+nav div {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+nav hr {
+    width: 25px;
+    border: 2px solid white;
+    margin: 0; 
+    padding: 0;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+nav div:hover hr {
+    border-color: #ff9800;
+    width: 35px;
+}
+
+/* Hero section */
+.container1 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 100vh;
+    padding: 50px;
+    text-align: center;
+}
+
+/* Image animation */
+.myimg {
+    width: 500px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 20px rgba(255, 255, 255, 0.2);
+    animation: float 4s infinite ease-in-out;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+/* Text section */
+.text {
+    max-width: 600px;
+    text-align: left;
+}
+
+/* Heading animation */
+.my, .portf {
+    font-size: 90px;
+    font-weight: bold;
+    color: white;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInUp 1s forwards;
+}
+
+.my{
+    font-size: 100px;
+    font-weight: bold;
+    color: white;
+    margin: 0;
+    white-space: nowrap;
+}
+
+.myport{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(50px); }
+    100% { opacity: 1; transform: translateY(0px); }
+}
+
+.linee {
+    flex-grow: 1;
+    border: none;
+    height: 3px; 
+    background-color: white;
+    margin-top: 50px;
+    width: 150px;
+}
+
+/* Paragraph fade-in effect */
+.para {
+    font-size: 18px;
+    line-height: 1.5;
+    margin: 20px 0;
+    animation: fadeIn 1.5s ease-in-out;
+    color: white;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Button styles */
+.ebtn {
+    background: linear-gradient(to right, #ff9800, #ff5722);
+    color: white;
+    padding: 12px 25px;
+    font-size: 18px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0px 4px 10px rgba(255, 87, 34, 0.3);
+    text-transform: uppercase;
+}
+
+.ebtn:hover {
+    transform: scale(1.1);
+    background: linear-gradient(to right, #ff5722, #ff9800);
+    box-shadow: 0px 4px 20px rgba(255, 87, 34, 0.5);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .container1 {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .text {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .my, .portf {
+        font-size: 60px;
+    }
+
+    .myimg {
+        width: 80%;
+    }
+}
+
+
+
