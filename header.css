@@ -64,8 +64,6 @@ html {
     transition: opacity 1.5s ease-in-out;
 }
 
-
-
 /* Background styling */
 body {
     background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
@@ -180,6 +178,7 @@ nav div:hover hr {
     border-radius: 10px;
     box-shadow: 0px 4px 20px rgba(255, 255, 255, 0.2);
     animation: float 4s infinite ease-in-out;
+    padding-right: 4.5rem;
 }
 
 @keyframes float {
@@ -285,6 +284,49 @@ nav div:hover hr {
         width: 80%;
     }
 }
+
+#home{
+    background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+#home button{
+    background: linear-gradient(to right, #ff9800, #ff5722);
+    color: white;
+    padding: 12px 25px;
+    font-size: 18px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0px 4px 10px rgba(255, 87, 34, 0.3);
+    text-transform: uppercase;
+}
+#home button:hover {
+    transform: scale(1.1);
+    background: linear-gradient(to right, #ff5722, #ff9800);
+    box-shadow: 0px 4px 20px rgba(255, 87, 34, 0.5);
+}
+section {
+    height: 100vh; /* Each section takes full screen height */
+    padding: 100px 20px;
+    text-align: center;
+    opacity: 0; /* Initially hidden */
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.visible {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+#about{
+    background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
 
 
 
