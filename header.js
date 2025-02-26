@@ -29,6 +29,8 @@ setTimeout(() => {
         document.getElementById('home').classList.add('visible');
         document.getElementById('about').classList.add('visible');
         document.getElementById('projects').classList.add('visible');
+        document.getElementById('contact').classList.add('visible');
+
     }, 100);
 
 }, 3000);
@@ -50,4 +52,16 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("view-work-btn").addEventListener("click", function () {
+        document.getElementById("projects").scrollIntoView({ behavior: "smooth" });
+    });
+});
+
+document.getElementById("contactForm").addEventListener("submit", function(event) {
+    setTimeout(() => {
+        document.getElementById("contactForm").reset(); // Clears input fields after submission
+    }, 1000); // Wait for 1 second before clearing
 });

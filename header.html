@@ -50,7 +50,7 @@
             <h2>Frontend Developer | Web Enthusiast 🚀</h2>
             <p>I am passionate about coding and building beautiful, interactive websites.  
                I love solving problems and continuously learning new technologies.</p>
-            <button onclick="scrollToSection('projects')" class="btn">View My Work</button>
+               <button id="view-work-btn" class="btn">View My Work</button>
         </section>
         <section id="about">
             <h2 class="aboutt">2. About Me</h2><br>
@@ -123,12 +123,40 @@
         
             </div>
         </section>
-        
-        
         <section id="contact">
-            <h1>Contact Me</h1>
-            <p>Feel free to reach out!</p>
-        </section>      
+            <h2 class="contact-title">4. Contact Me</h2>
+            <div class="contact-container">
+                
+                <!-- Left: Contact Info -->
+                <div class="contact-info">
+                    <p><i class="fas fa-envelope"></i> manikantareddymca@gmail.com</p>
+                    <p><i class="fas fa-phone"></i> 9542211315</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Ramannapalem, Visakhapatnam</p>
+                    
+                    <!-- Social Links -->
+                    <div class="social-links">
+                        <a href="https://github.com/ManikantaReddy9" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/reddy-manikanta18/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+        
+                <!-- Right: Contact Form -->
+                <form action="https://formsubmit.co/manikantareddymca@gmail.com" method="POST" class="contact-form" id="contactForm">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                    
+                    <!-- Optional: Redirect to Thank You Page -->
+                    <input type="hidden" name="_next" value="https://your-portfolio-site.com/thank-you.html">
+                    
+                    <!-- Optional: Disable Captcha -->
+                    <input type="hidden" name="_captcha" value="false">
+                
+                    <button type="submit" class="btn">Send Message</button>
+                </form>  
+            </div>
+        </section>
+              
     </div>
     
     <script src="./header.js"></script>
