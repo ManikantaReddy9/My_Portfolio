@@ -617,6 +617,69 @@ ul li::before {
     }
 }
 
+/* Thank You Section */
+#thank-you {
+    background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+    text-align: center;
+    padding: 50px 10%;
+    color: white;
+    border-top: 3px solid #ff9800;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Floating Animations */
+#thank-you::before, #thank-you::after {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    animation: float 6s infinite alternate;
+}
+
+#thank-you::before {
+    top: 20px;
+    left: -50px;
+}
+
+#thank-you::after {
+    bottom: 20px;
+    right: -50px;
+}
+
+/* Floating Effect */
+@keyframes float {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-20px); }
+}
+
+/* Social Links */
+.social-links {
+    margin-top: 20px;
+}
+
+.social-links a {
+    color: white;
+    font-size: 24px;
+    margin: 0 10px;
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.social-links a:hover {
+    transform: scale(1.2);
+    color: #ff9800;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    #thank-you {
+        padding: 30px 5%;
+    }
+}
+
+
 
 
 

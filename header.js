@@ -30,6 +30,7 @@ setTimeout(() => {
         document.getElementById('about').classList.add('visible');
         document.getElementById('projects').classList.add('visible');
         document.getElementById('contact').classList.add('visible');
+        document.getElementById('thank-you').classList.add('visible');
 
     }, 100);
 
