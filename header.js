@@ -27,7 +27,9 @@ setTimeout(() => {
 
         // Show the Home section specifically
         document.getElementById('home').classList.add('visible');
+        document.getElementById('about').classList.add('visible');
     }, 100);
+
 }, 3000);
 
 document.addEventListener("DOMContentLoaded", function () {
