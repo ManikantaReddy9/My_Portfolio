@@ -66,3 +66,7 @@ document.getElementById("contactForm").addEventListener("submit", function(event
         document.getElementById("contactForm").reset(); // Clears input fields after submission
     }, 1000); // Wait for 1 second before clearing
 });
+
+document.getElementById("ebbtn").addEventListener("click", function () {
+    document.getElementById("home").scrollIntoView({ behavior: "smooth" });
+});
