@@ -1,9 +1,8 @@
-/* Apply smooth scrolling */
+
 html {
     scroll-behavior: smooth;
 }
 
-/* Full-screen welcome screen */
 #welcome-screen {
     position: fixed;
     top: 0;
@@ -22,13 +21,11 @@ html {
     animation: fadeOut 3s ease-in-out 3s forwards, bgAnimation 6s infinite alternate;
 }
 
-/* Background Animation */
 @keyframes bgAnimation {
     0% { background-position: 0% 50%; }
     100% { background-position: 100% 50%; }
 }
 
-/* Typing effect */
 .welcome-text {
     font-size: 50px;
     font-weight: bold;
@@ -41,37 +38,32 @@ html {
     animation: typing 2s steps(22, end) forwards, blink 0.7s infinite;
 }
 
-/* Typing animation */
 @keyframes typing {
     from { width: 0; }
     to { width: 100%; }
 }
 
-/* Blinking cursor effect */
 @keyframes blink {
     50% { border-color: transparent; }
 }
 
-/* Fade-out effect */
 @keyframes fadeOut {
     0% { opacity: 1; }
     100% { opacity: 0; visibility: hidden; }
 }
 
-/* Fade-in effect for main content */
 #main-content {
     opacity: 0;
     transition: opacity 1.5s ease-in-out;
 }
 
-/* Background styling */
+
 body {
     background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
     font-family: 'Poppins', sans-serif;
     color: white;
 }
 
-/* Header with glassmorphism effect */
 header {
     background: rgba(0, 0, 0, 0.7); 
     backdrop-filter: blur(10px);
@@ -84,7 +76,6 @@ header {
     transition: 0.3s ease-in-out;
 }
 
-/* Logo styling */
 .logo a {
     font-size: 22px;
     font-weight: bold;
@@ -94,17 +85,17 @@ header {
     overflow: hidden;
     white-space: nowrap;
     display: inline-block;
-    width: 25px; /* Initially show only the first letter */
+    width: 25px; 
     transition: width 0.7s ease-in-out;
     animation: showFullName 3s ease-in-out forwards;
 }
 
 @keyframes showFullName {
     0% {
-        width: 25px; /* Show only "M" */
+        width: 25px; 
     }
     100% {
-        width: 250px; /* Expand to full name */
+        width: 250px;
     }
 }
 
@@ -114,7 +105,6 @@ header {
     transform: scale(1.1);
 }
 
-/* Navigation menu */
 nav ul {
     display: flex;
     align-items: center;
@@ -141,7 +131,6 @@ nav ul li a:hover {
     transform: scale(1.1);
 }
 
-/* Animated lines */
 nav div {
     display: flex;
     flex-direction: column;
@@ -162,7 +151,6 @@ nav div:hover hr {
     width: 35px;
 }
 
-/* Hero section */
 .container1 {
     display: flex;
     justify-content: space-around;
@@ -172,7 +160,6 @@ nav div:hover hr {
     text-align: center;
 }
 
-/* Image animation */
 .myimg {
     width: 500px;
     border-radius: 10px;
@@ -187,13 +174,11 @@ nav div:hover hr {
     100% { transform: translateY(0px); }
 }
 
-/* Text section */
 .text {
     max-width: 600px;
     text-align: left;
 }
 
-/* Heading animation */
 .my, .portf {
     font-size: 90px;
     font-weight: bold;
@@ -230,7 +215,6 @@ nav div:hover hr {
     width: 150px;
 }
 
-/* Paragraph fade-in effect */
 .para {
     font-size: 18px;
     line-height: 1.5;
@@ -244,7 +228,6 @@ nav div:hover hr {
     to { opacity: 1; }
 }
 
-/* Button styles */
 .ebtn {
     background: linear-gradient(to right, #ff9800, #ff5722);
     color: white;
@@ -264,7 +247,6 @@ nav div:hover hr {
     box-shadow: 0px 4px 20px rgba(255, 87, 34, 0.5);
 }
 
-/* Responsive styles */
 @media (max-width: 768px) {
     .container1 {
         flex-direction: column;
@@ -310,7 +292,7 @@ nav div:hover hr {
 section {
     padding: 100px 20px;
     /* text-align: center; */
-    opacity: 0; /* Initially hidden */
+    opacity: 0; 
     transform: translateY(20px);
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
@@ -344,7 +326,7 @@ section {
     color: yellowgreen;
 }
 
-/* About Section */
+
 .about-container {
     display: flex;
     align-items: center;
@@ -422,7 +404,7 @@ ul li::before {
     margin-right: 10px;
 }
 
-/* Responsive Design */
+
 @media (max-width: 768px) {
     .about-container {
         flex-direction: column;
@@ -444,7 +426,7 @@ ul li::before {
     }
 }
 
-/* Projects Section */
+
 .projects-container {
     display: flex;
     flex-wrap: wrap;
@@ -506,7 +488,7 @@ ul li::before {
     background: linear-gradient(to right, #ff5722, #ff9800);
 }
 
-/* Responsive */
+
 @media (max-width: 768px) {
     .projects-container {
         flex-direction: column;
@@ -518,7 +500,7 @@ ul li::before {
     }
 }
 
-/* Contact Section */
+
 .contact-container {
     display: flex;
     justify-content: space-between;
@@ -530,7 +512,6 @@ ul li::before {
     flex-wrap: wrap;
 }
 
-/* Contact Info */
 .contact-info {
     color: white;
     max-width: 400px;
@@ -549,7 +530,7 @@ ul li::before {
     font-size: 20px;
 }
 
-/* Social Links */
+
 .social-links {
     margin-top: 20px;
 }
@@ -566,7 +547,7 @@ ul li::before {
     transform: scale(1.2);
 }
 
-/* Contact Form */
+
 .contact-form {
     display: flex;
     flex-direction: column;
@@ -605,7 +586,7 @@ ul li::before {
     background: linear-gradient(to right, #ff5722, #ff9800);
 }
 
-/* Responsive */
+
 @media (max-width: 768px) {
     .contact-container {
         flex-direction: column;
@@ -617,7 +598,7 @@ ul li::before {
     }
 }
 
-/* Thank You Section */
+
 #thank-you {
     background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
     text-align: center;
@@ -628,7 +609,6 @@ ul li::before {
     overflow: hidden;
 }
 
-/* Floating Animations */
 #thank-you::before, #thank-you::after {
     content: "";
     position: absolute;
@@ -649,13 +629,12 @@ ul li::before {
     right: -50px;
 }
 
-/* Floating Effect */
 @keyframes float {
     0% { transform: translateY(0); }
     100% { transform: translateY(-20px); }
 }
 
-/* Social Links */
+
 .social-links {
     margin-top: 20px;
 }
@@ -672,7 +651,6 @@ ul li::before {
     color: #ff9800;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
     #thank-you {
         padding: 30px 5%;
