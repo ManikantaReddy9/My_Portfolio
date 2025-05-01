@@ -11,6 +11,11 @@ function typeEffect() {
     }
 }
 
+function toggleMenu() {
+    const menu = document.getElementById('mobileMenu');
+    menu.classList.toggle('active');
+  }
+  
 document.addEventListener("DOMContentLoaded", () => {
     typeEffect();
 });

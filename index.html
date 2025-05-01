@@ -14,22 +14,32 @@
     </div>
     <div id="main-content" style="display: none;">
         <header>
-            <div class="logo">
-                <a href="index.php">Manikanta Reddy</a>
+            <div class="logo"><a href="#">Portfolio</a></div>
+          
+            <!-- Hamburger Icon -->
+            <div class="hamburger" onclick="toggleMenu()">
+              <div></div>
+              <div></div>
             </div>
+          
+            <!-- Desktop Nav -->
             <nav>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <div class="lines">
-                        <hr id="hrr" class="border border-white border-2 opacity-75">
-                        <hr id="hrrr" class="border border-white border-2 opacity-75">
-                    </div>
-                </ul>
+              <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+              </ul>
             </nav>
-        </header>
+          </header>
+          
+          <div class="mobile-menu" id="mobileMenu">
+            <a href="#home" onclick="toggleMenu()">Home</a>
+            <a href="#about" onclick="toggleMenu()">About</a>
+            <a href="#projects" onclick="toggleMenu()">Projects</a>
+            <a href="#contact" onclick="toggleMenu()">Contact</a>
+          </div>
+          
         <div class="container1">
             <img class="myimg" src="./photos/IMG-20250225-WA0004-removebg-preview.png" alt="my image">
             <div class="text">
