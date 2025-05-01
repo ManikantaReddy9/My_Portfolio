@@ -398,7 +398,6 @@ ul li {
 }
 
 ul li::before {
-    content: "✔";
     color: #ff9800;
     font-size: 18px;
     margin-right: 10px;
