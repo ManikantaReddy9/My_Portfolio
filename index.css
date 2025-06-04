@@ -705,6 +705,22 @@ ul li::before {
         display: flex;
     }
 }
+@media (max-width: 480px) {
+  .container1 {
+    padding: 20px;
+  }
+}
+a:focus, button:focus {
+  outline: 2px dashed #ff9800;
+  outline-offset: 4px;
+}
+
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  100% { opacity: 0; visibility: hidden; pointer-events: none; }
+}
+
+
 
 
 
