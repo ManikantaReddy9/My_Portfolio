@@ -15,6 +15,11 @@ function toggleMenu() {
     const menu = document.getElementById('mobileMenu');
     menu.classList.toggle('active');
   }
+  function toggleMenu() {
+    const nav = document.querySelector('nav');
+    nav.classList.toggle('active');
+}
+
   
 document.addEventListener("DOMContentLoaded", () => {
     typeEffect();

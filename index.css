@@ -683,6 +683,38 @@ ul li::before {
     transition: right 0.3s ease-in-out;
     z-index: 1000;
 }
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: white; /* or whatever bg */
+        position: absolute;
+        top: 60px; /* adjust based on header height */
+        right: 0;
+        width: 200px; /* or desired width */
+        box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    nav.active ul {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+        cursor: pointer;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .hamburger div {
+        width: 25px;
+        height: 3px;
+        background-color: black;
+    }
+}
+
 
 .mobile-menu.active {
     right: 0;
